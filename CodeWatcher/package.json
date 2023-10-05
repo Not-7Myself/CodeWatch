@@ -1,0 +1,46 @@
+{
+  "name": "count-lines-by-language",
+  "displayName": "Count_lines_by_language",
+  "description": "Counts lines of code by language in the current workspace directory",
+  "version": "0.0.1",
+  "publisher": "Vipul",
+  "engines": {
+      "vscode": "^1.54.1"
+  },
+  "categories": [
+      "Other"
+  ],
+  "commands": [{
+      "command": "extension.countLines",
+      "title": "Count Lines"
+  }],
+  "activationEvents": [
+      "onCommand:extension.countLines"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+        {
+            "command": "extension.countLines",
+            "title": "Count Lines"
+        }
+    ]
+},
+  "license": "MIT",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/YOUR_GITHUB_ACCOUNT/YOUR_REPOSITORY.git"
+  },
+  "devDependencies": {
+      "@types/node": "^15.12.5",
+      "@types/vscode": "^1.57.1"
+  },
+  "scripts": {
+      "vscode:prepublish": "npm run compile",
+      "compile": "tsc -p ./",
+      "watch": "tsc -watch -p ./",
+      "pretest": "npm run compile",
+      "lint": "eslint src --ext ts",
+      "test": "npm run test-compile && node ./out/test/runTest.js"
+  }
+}
