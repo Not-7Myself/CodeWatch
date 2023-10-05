@@ -1,0 +1,28 @@
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+main {
+    height: 100vh;
+    height: -webkit-fill-available;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.acbg{
+    background-color: #896a9a;
+    color: #e7e9ee;
+}
+.acbg:hover{
+    color: #e7e9ee;
+}
+#sidenav{
+    position: fixed;
+    height: 100vh;
+    background-color: #1e1721;
+}
