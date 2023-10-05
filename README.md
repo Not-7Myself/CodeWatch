@@ -1,5 +1,5 @@
 # CodeWatch
 https://code-watch-final.vercel.app/
-(Snippets feature no completed)
+(Snippets feature not completed)
 
 - Team Heks
