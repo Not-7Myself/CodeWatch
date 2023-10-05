@@ -14,7 +14,9 @@ main {
   overflow-x: auto;
   overflow-y: hidden;
 }
-
+li{
+  margin-bottom: 30px;
+}
 .acbg {
   background-color: #896a9a;
   color: #e7e9ee;
@@ -152,4 +154,20 @@ code {
 .sniphref svg {
   text-decoration: none;
   color: #040506;
+}
+.snpup{
+  color: #e7e9ee;
+  position: absolute;
+  width: calc(100vw - 210px - 1.5vw);
+  height: calc(100vh - 1.5vw);
+  top: 0.75vw;
+  right: 0.75vw;
+}
+.snipinp{
+  background-color: #1e1721;
+  border: none;
+}
+.snipinp:active{
+  border: none;
+  background-color: #1e1721;
 }
