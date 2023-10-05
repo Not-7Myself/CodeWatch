@@ -164,10 +164,38 @@ code {
   right: 0.75vw;
 }
 .snipinp{
+  color: #e7e9ee;
   background-color: #1e1721;
   border: none;
 }
-.snipinp:active{
+.snipinp:focus{
+  color: #e7e9ee;
   border: none;
   background-color: #1e1721;
+}
+
+
+.snpsubmit{
+  background-color: #896a9a;
+  border: #896a9a;
+  color: #1e1721;
+}
+.snpsubmit:hover{
+  background-color: #1e1721;
+  border: #1e1721;
+  color: #e7e9ee;
+}
+
+.snpsubmit:onclick{
+  background-color: #896a9a;
+  border: #896a9a;
+  color: #1e1721;
+}
+
+.anco{
+  position: absolute;
+  width: calc(100vw - 210px - 1.5vw);
+  height: calc(100vh - 1.5vw);
+  top: 0.75vw;
+  right: 0.75vw;
 }
