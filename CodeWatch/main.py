@@ -7,7 +7,7 @@ from firebase_admin import db, credentials
 
 import operator
 
-cred = credentials.Certificate('credentials.json')
+cred = credentials.Certificate('CodeWatch\credentials.json')
 firebase_admin.initialize_app(cred, {"databaseURL":"https://code-watch-default-rtdb.asia-southeast1.firebasedatabase.app/"})
 
 auth = Auth.Token('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')
@@ -17,7 +17,6 @@ g = Github(auth=auth)
 
 def no_commit(user):
     total = 0
-    fake = 0
     for repo in g.get_user(user).get_repos():
             if user == repo.owner.login:
                 total += repo.get_commits().totalCount
@@ -25,7 +24,6 @@ def no_commit(user):
     return total
 ref.update({"No_commits_" + str("Not-7Myself"): str(no_commit("Not-7Myself"))})
 
-print(ref.get())
 def calc_language_percentage(user):
     repos = g.get_user(user).get_repos()
     lang_dict = {}
@@ -42,24 +40,34 @@ def calc_language_percentage(user):
         percentages[key] = f"{value / total:.2f}%"
     return percentages
 
-ref.update({"lang": str(calc_language_percentage('aouxwoux'))})
+ref.update({"lang"+str("Not-7Myself"): str(calc_language_percentage('Not-7Myself'))})
 
 deadline = date.today()
 mnth = datetime.now().month
+month_Commit = {'1':0,'2':0,'3':0,'4':0,'5':0,'6':0,'7':0,'8':0,'9':0,'10':0,'11':0,'12':0,}
+mnth = [1,2,3,4,5,6,7,8,9,10,11,12]
+target_year = 2023
+
+strt_list = []
+end_list = []
+
+for i in range(len(mnth)):
+    target_month = mnth[i]
+    start_date = datetime(target_year, target_month, 1)
+    strt_list.append(start_date)
+for i in range(len(mnth)):
+    target_month = mnth[i]
+    end_date = datetime(target_year, target_month % 12 + 1, 1)
+    end_list.append(end_date)
 def date_commit(user):
-    d = []
-    da = []
     for repo in g.get_user(user).get_repos():
         for com in repo.get_commits():
-            d.append(com.commit.author.date)
-        for i in range(len(d)):
-            for j in range(13):
-                if d[i].month == j:
-                    da.append(d[i])
-        
+            com_date = com.commit.author.date
+            naive_Dt = com_date.replace(tzinfo=None)
+            for j in range(len(mnth)):
+                if strt_list[j] <= naive_Dt < end_list[j]:
+                    month_Commit[str(j+1)]= 1
+    return month_Commit
 ref.update({"date_commits_" + str("Not-7Myself"): list(date_commit("Not-7Myself"))})
-'''
-Date of commits: "Line Graph"
-Languages Used: "Bar Graph based on overall language used"
-No. of commits Made: "Stats for commit page"
-'''
+
+print(ref.get())
