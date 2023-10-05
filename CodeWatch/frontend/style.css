@@ -98,3 +98,38 @@ main {
   grid-area: c4;
   font-size: 1.3vw;
 }
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+.item {
+  color: #e7e9ee;
+  background-color: #1e1721;
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.badge {
+  background-color: #896a9a;
+}
+
+code {
+  word-wrap: break-word;
+}
+
+.container {
+  position: absolute;
+  top: 1.5vw;
+  right: 0.50vw;
+  width: calc(100vw - 210px - 1.5vw);
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
