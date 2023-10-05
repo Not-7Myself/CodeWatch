@@ -15,15 +15,21 @@
 
   <body style="background: #040506">
     <main class="d-flex flex-nowrap">
-        <div class="ldata position-absolute top-50 start-50 translate-middle">
-            <div class="h1" style="color: white">
-                Login to Continue!
-            </div>
-           <div class="logbtn">
-            <button type="button" class="btn btn-primary btn-lg">LOGIN</button>
-           </div>
+      <div class="ldata position-absolute top-50 start-50 translate-middle">
+        <div class="h1" style="color: white">Login to Continue!</div>
+        <div class="logbtn">
+          <button onclick="loginGithub()" type="button" class="btn btn-primary btn-lg">LOGIN</button>
+          <script>
+            const CLIENT_ID = "779349895d6267fc5df7";
 
+            function loginGithub() {
+              window.location.assign(
+                "https://github.com/login/oauth/authorize?client_id=" + CLIENT_ID
+              );
+            }
+          </script>
         </div>
+      </div>
     </main>
 
     <script
