@@ -18,5 +18,6 @@ const db = getDatabase(app)
 const Ref = ref(db)
 get(Ref).then((snapshot) => {
     console.log(snapshot.val())
-    user_data = snapshot.val()
+    
+    
 })
