@@ -223,7 +223,7 @@ code {
   grid-area: graph;
 }
 #lineChart{
-  height: 60vh;
+  height: 43vh;
 }
 
 .progress-bar{
@@ -232,5 +232,5 @@ code {
 
 .progress{
   margin: 0.75vw;
-  background-color: #040506;
+  background-color: #896a9a27;
 }
