@@ -1,5 +1,5 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-import { getDatabases,set,child,get,update,remove,ref } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+import { initializeApp } from "firebase/app";
+import { getDatabase,set,child,get,update,remove,ref } from "firebase/database";
 
 const config = {
     apiKey: "AIzaSyB9hGpepr9Byve6EwEOvmZKqLfdng_QyTU",
@@ -13,9 +13,10 @@ const config = {
 }
 
 const app = initializeApp(config)
-const db = getDatabases(app)
+const db = getDatabase(app)
 
 const Ref = ref(db)
 get(Ref).then((snapshot) => {
     console.log(snapshot.val())
 })
+
