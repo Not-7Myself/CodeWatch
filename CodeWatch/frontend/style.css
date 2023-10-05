@@ -133,3 +133,11 @@ code {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
+
+.snipupload{
+  position: sticky;
+  background-color: #6c9df9;
+  bottom: 0.75vw;
+  right: 0.75vw;
+
+}
