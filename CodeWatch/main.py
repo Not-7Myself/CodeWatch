@@ -68,6 +68,6 @@ def date_commit(user):
                 if strt_list[j] <= naive_Dt < end_list[j]:
                     month_Commit[str(j+1)]= 1
     return month_Commit
-ref.update({"date_commits_" + str("Not-7Myself"): list(date_commit("Not-7Myself"))})
+ref.update({"date_commits_" + str("Not-7Myself"): str(date_commit("Not-7Myself"))})
 
 print(ref.get())
