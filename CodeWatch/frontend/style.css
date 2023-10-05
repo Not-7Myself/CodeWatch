@@ -126,7 +126,7 @@ code {
 .container {
   position: absolute;
   top: 1.5vw;
-  right: 0.50vw;
+  right: 0.5vw;
   width: calc(100vw - 210px - 1.5vw);
   display: grid;
   display: grid;
@@ -134,10 +134,22 @@ code {
   gap: 10px;
 }
 
-.snipupload{
-  position: sticky;
+.snipupload {
+  position: fixed;
   background-color: #6c9df9;
   bottom: 0.75vw;
   right: 0.75vw;
+  width: 11vw;
+  height: 3vw;
+  border-radius: 0.75vw;
+  z-index: 1;
+}
 
+.sniphref {
+  text-decoration: none;
+  color: #040506;
+}
+.sniphref svg {
+  text-decoration: none;
+  color: #040506;
 }
