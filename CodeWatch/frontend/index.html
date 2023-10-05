@@ -11,134 +11,23 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <script type="module" src="main.js">
-      get(Ref).then((snapshot) => {
-    console.log(snapshot.val())
-    user_data = snapshot.val()
-})
-    </script>
   </head>
 
   <body style="background: #040506">
     <main class="d-flex flex-nowrap">
-      <div id="sidenav">
-        <div
-          class="d-flex flex-column flex-shrink-0 p-3 text-dark"
-          style="width: 210px; background-color: #1e1721"
-        >
-          <a
-            href="/"
-            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
-          >
-            <svg class="bi pe-none me-2" width="40" height="32">
-              <use xlink:href="#bootstrap" />
-            </svg>
-            <span class="fs-4">Code<span style="color: #6c9df9">Watch</span></span>
-          </a>
-          <hr />
-          <ul class="nav nav-pills flex-column mb-auto">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link activ acbg" aria-current="page">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-window-dock"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M3.5 11a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm3.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm4.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Z"
-                  />
-                  <path
-                    d="M14 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h12ZM2 14h12a1 1 0 0 0 1-1V5H1v8a1 1 0 0 0 1 1ZM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2Z"
-                  />
-                </svg>
-                Getting Started
-              </a>
-            </li>
-            <li>
-              <a href="analytics.html" class="nav-link text-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-bar-chart-line-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z"
-                  />
-                </svg>
-                Analytics
-              </a>
-            </li>
-            <li>
-              <a href="snippets.html" class="nav-link text-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-braces"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z"
-                  />
-                </svg>
-                Snippets
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <div class="ldata position-absolute top-50 start-50 translate-middle">
+        <div class="h1" style="color: white">Login to Continue!</div>
+        <div class="logbtn">
+          <button onclick="loginGithub()" type="button" class="btn btn-primary btn-lg">LOGIN</button>
+          <script>
+            const CLIENT_ID = "779349895d6267fc5df7";
 
-      <div class="gscont">
-        <div class="gscontainer">
-          <div class="c1">
-            <div class="h3">
-              Welcome <span id="user" style="color: #896a9a">User</span>!
-            </div>
-            <p class="mt-4">
-              We have built this platform to help developers like us! They want
-              to make their programming experience more productive. You can use
-              our different utilities to optimize your workflow! To get
-              perfectly set up, you can install our VS Code extension.
-            </p>
-          </div>
-          <div class="c3">
-            <div class="h3">Analytics</div>
-            <p class="mt-4 fw-medium">
-              You know, we know, analytics are boring! But until they are about
-              you and your skills, with our new Analytics tab, you can track the
-              longest you have coded! or maybe whats your coding style!? Or,
-              what languages do you use the most? and much, much more, all in
-              one place! To fully utilize analytics, you must install the VS
-              Code extension.
-            </p>
-          </div>
-          <div class="c4">
-            <div class="h3">Snippets</div>
-            <p class="mt-4 fw-medium">
-              I just got an idea for a new Discord bot! But too lazy to write
-              the code again:<br />
-              And your code folder is just too cluttered to see it again.<br />
-              Don't worry! Just come up with your very own snippet.<br />
-              Library! Just upload any of your small or big code snippets, and
-              they will be saved here forever! Just come back here and look for
-              that exact one, and you are good to go!
-            </p>
-          </div>
-          <div class="c2">
-            <div class="h3">Profile</div>
-            <p class="mt-4 fw-medium">
-              Everybody knows how cool profiles are.aren't they? Our profile
-              section showsyour stats, your cool badges, yourbest milestones,
-              and what about yourEXP? Yes, that too!
-            </p>
-          </div>
+            function loginGithub() {
+              window.location.assign(
+                "https://github.com/login/oauth/authorize?client_id=" + CLIENT_ID
+              );
+            }
+          </script>
         </div>
       </div>
     </main>
