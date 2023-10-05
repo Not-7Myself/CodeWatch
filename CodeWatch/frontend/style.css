@@ -14,7 +14,7 @@ main {
   overflow-x: auto;
   overflow-y: hidden;
 }
-li{
+li {
   margin-bottom: 30px;
 }
 .acbg {
@@ -155,7 +155,7 @@ code {
   text-decoration: none;
   color: #040506;
 }
-.snpup{
+.snpup {
   color: #e7e9ee;
   position: absolute;
   width: calc(100vw - 210px - 1.5vw);
@@ -163,39 +163,78 @@ code {
   top: 0.75vw;
   right: 0.75vw;
 }
-.snipinp{
+.snipinp {
   color: #e7e9ee;
   background-color: #1e1721;
   border: none;
 }
-.snipinp:focus{
+.snipinp:focus {
   color: #e7e9ee;
   border: none;
   background-color: #1e1721;
 }
 
-
-.snpsubmit{
+.snpsubmit {
   background-color: #896a9a;
   border: #896a9a;
   color: #1e1721;
 }
-.snpsubmit:hover{
+.snpsubmit:hover {
   background-color: #1e1721;
   border: #1e1721;
   color: #e7e9ee;
 }
 
-.snpsubmit:onclick{
+.snpsubmit:onclick {
   background-color: #896a9a;
   border: #896a9a;
   color: #1e1721;
 }
 
-.anco{
+.anco {
   position: absolute;
   width: calc(100vw - 210px - 1.5vw);
   height: calc(100vh - 1.5vw);
   top: 0.75vw;
   right: 0.75vw;
+}
+.anlcont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 18px 18px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "exp exp"
+    "grh1 grh2";
+}
+
+.exp {
+  background-color: #1e1721;
+  border-radius: 0.75vw;
+  padding: 0.75vw;
+  grid-area: exp;
+}
+
+.grh1 {
+  background-color: #1e1721;
+  border-radius: 0.75vw;
+  padding: 0.75vw;
+  grid-area: grh1;
+}
+
+.grh2 {
+  background-color: #1e1721;
+  border-radius: 0.75vw;
+  padding: 0.75vw;
+  grid-area: grh2;
+}
+
+.progress-bar{
+  background-color: #896a9a;
+}
+
+.progress{
+  margin: 0.75vw;
+  background-color: #040506;
 }
