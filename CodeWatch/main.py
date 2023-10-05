@@ -40,7 +40,7 @@ def calc_language_percentage(user):
         percentages[key] = f"{value / total:.2f}%"
     return percentages
 
-ref.update({"lang"+str("Not-7Myself"): str(calc_language_percentage('Not-7Myself'))})
+ref.update({"lang_"+str("Not-7Myself"): str(calc_language_percentage('Not-7Myself'))})
 
 deadline = date.today()
 mnth = datetime.now().month
