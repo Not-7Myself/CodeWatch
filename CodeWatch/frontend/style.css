@@ -199,14 +199,14 @@ code {
   right: 0.75vw;
 }
 .anlcont {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 18px 18px;
-  grid-auto-flow: row;
-  grid-template-areas:
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 18px 18px; 
+  grid-template-areas: 
     "exp exp"
-    "grh1 grh2";
+    "graph graph"; 
+
 }
 
 .exp {
@@ -216,18 +216,14 @@ code {
   grid-area: exp;
 }
 
-.grh1 {
+.graph {
   background-color: #1e1721;
   border-radius: 0.75vw;
   padding: 0.75vw;
-  grid-area: grh1;
+  grid-area: graph;
 }
-
-.grh2 {
-  background-color: #1e1721;
-  border-radius: 0.75vw;
-  padding: 0.75vw;
-  grid-area: grh2;
+#lineChart{
+  height: 60vh;
 }
 
 .progress-bar{
